@@ -1,0 +1,1134 @@
+[
+    {
+        "id": "c072961a5da76560",
+        "type": "group",
+        "z": "b723cd2c2bf700f7",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "9cb83521f669365d",
+            "6db46f8f3c7440ba",
+            "fe869dfc718cfcb0",
+            "f848e0a07ce32565"
+        ],
+        "x": 194,
+        "y": 199,
+        "w": 372,
+        "h": 142
+    },
+    {
+        "id": "9cb83521f669365d",
+        "type": "ui_chart",
+        "z": "b723cd2c2bf700f7",
+        "g": "c072961a5da76560",
+        "name": "",
+        "group": "182b8f1c631e9a6a",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "label": "อูณหภูมิ",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#29adff",
+            "#006eff",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#8400ff",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 480,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6db46f8f3c7440ba",
+        "type": "mqtt in",
+        "z": "b723cd2c2bf700f7",
+        "g": "c072961a5da76560",
+        "name": "",
+        "topic": "test/tem",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "88b8600ccefd4aa4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 240,
+        "wires": [
+            [
+                "9cb83521f669365d"
+            ]
+        ]
+    },
+    {
+        "id": "fe869dfc718cfcb0",
+        "type": "mqtt in",
+        "z": "b723cd2c2bf700f7",
+        "g": "c072961a5da76560",
+        "name": "",
+        "topic": "test/hum",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "88b8600ccefd4aa4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 300,
+        "wires": [
+            [
+                "f848e0a07ce32565"
+            ]
+        ]
+    },
+    {
+        "id": "f848e0a07ce32565",
+        "type": "ui_gauge",
+        "z": "b723cd2c2bf700f7",
+        "g": "c072961a5da76560",
+        "name": "",
+        "group": "182b8f1c631e9a6a",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "ความชื้นสัมพัทธ์",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#b30000",
+            "#e6e600",
+            "#3ccb3a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 460,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "182b8f1c631e9a6a",
+        "type": "ui_group",
+        "name": "",
+        "tab": "cc5f88534cba80be",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": "group-spacing"
+    },
+    {
+        "id": "88b8600ccefd4aa4",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "0a4dd921-628f-4306-9247-5044479639d3",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "cc5f88534cba80be",
+        "type": "ui_tab",
+        "name": "ฟามเห็ด2",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0fe75074b046ce3e",
+        "type": "group",
+        "z": "b723cd2c2bf700f7",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "4fe5b6d522acdfd0",
+            "7fb775dfec2a2fab",
+            "41719791d53dd620",
+            "71df26c7f10af68c",
+            "e2eb0a755e0b55c3",
+            "7abf6254b427d3e8",
+            "737d2399949a5646",
+            "63fc7c5e2d1ca25d",
+            "7c049ead0b0802ec"
+        ],
+        "x": 614,
+        "y": 219,
+        "w": 672,
+        "h": 202
+    },
+    {
+        "id": "4fe5b6d522acdfd0",
+        "type": "ui_dropdown",
+        "z": "b723cd2c2bf700f7",
+        "g": "0fe75074b046ce3e",
+        "name": "",
+        "label": "เลือกชนิดเห็ด",
+        "tooltip": "",
+        "place": "เลือกเห็ด",
+        "group": "182b8f1c631e9a6a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "เห็ดฟาง",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "เห็ดนางฟ้า ",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "เห็ดหูหนู",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "เห็ดนางรม",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "เห็ดเข็มทอง",
+                "value": "5",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 710,
+        "y": 260,
+        "wires": [
+            [
+                "7fb775dfec2a2fab",
+                "71df26c7f10af68c",
+                "7c049ead0b0802ec"
+            ]
+        ],
+        "info": "[\r\n  {\"label\":\"กรุงเทพฯ\",\"value\":\"bangkok\"},\r\n  {\"label\":\"เชียงใหม่\",\"value\":\"chiangmai\"},\r\n  {\"label\":\"ภูเก็ต\",\"value\":\"phuket\"}\r\n]\r\n"
+    },
+    {
+        "id": "7fb775dfec2a2fab",
+        "type": "function",
+        "z": "b723cd2c2bf700f7",
+        "g": "0fe75074b046ce3e",
+        "name": "",
+        "func": "// กำหนดค่า payload ตามที่ผู้ใช้เลือก\nif ([\"1\", \"2\", \"3\", \"4\", \"5\"].includes(msg.payload)) {\n    msg.topic = \"test/option\"; // ตั้งค่า topic ที่จะส่ง\n    msg.payload = parseInt(msg.payload, 10); // แปลงค่าเป็นตัวเลข\n    return msg; // ส่ง msg ออก\n} \nreturn null; // ไม่ส่งอะไรถ้าไม่ใช่ Option ที่กำหนด\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 260,
+        "wires": [
+            [
+                "41719791d53dd620"
+            ]
+        ]
+    },
+    {
+        "id": "41719791d53dd620",
+        "type": "mqtt out",
+        "z": "b723cd2c2bf700f7",
+        "g": "0fe75074b046ce3e",
+        "name": "",
+        "topic": "test/option",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "16f11b25e0a34abf",
+        "x": 1070,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "71df26c7f10af68c",
+        "type": "function",
+        "z": "b723cd2c2bf700f7",
+        "g": "0fe75074b046ce3e",
+        "name": "",
+        "func": "msg.payload = JSON.stringify({\n  mushroom_id: msg.payload\n});\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 320,
+        "wires": [
+            [
+                "e2eb0a755e0b55c3"
+            ]
+        ]
+    },
+    {
+        "id": "e2eb0a755e0b55c3",
+        "type": "http request",
+        "z": "b723cd2c2bf700f7",
+        "g": "0fe75074b046ce3e",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://172.31.14.43:8080/select-mushroom",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Content-Type",
+                "valueType": "other",
+                "valueValue": "application/json"
+            }
+        ],
+        "x": 1070,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7abf6254b427d3e8",
+        "type": "function",
+        "z": "b723cd2c2bf700f7",
+        "g": "0fe75074b046ce3e",
+        "name": "function 3",
+        "func": "var data = JSON.parse(msg.payload);  // แปลง string เป็น JSON\nmsg.payload = `อุณหภูมิที่เหมาะสม: <b>${data.temp_need}°C</b><br>ความชื้นที่เหมาะสม: <b>${data.humi_need}%</b>`;\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 380,
+        "wires": [
+            [
+                "737d2399949a5646"
+            ]
+        ]
+    },
+    {
+        "id": "737d2399949a5646",
+        "type": "ui_text",
+        "z": "b723cd2c2bf700f7",
+        "g": "0fe75074b046ce3e",
+        "group": "182b8f1c631e9a6a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1210,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "63fc7c5e2d1ca25d",
+        "type": "http request",
+        "z": "b723cd2c2bf700f7",
+        "g": "0fe75074b046ce3e",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://172.31.14.43:8080/mushroom-conditions",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Content-Type",
+                "valueType": "other",
+                "valueValue": "application/json"
+            }
+        ],
+        "x": 890,
+        "y": 380,
+        "wires": [
+            [
+                "7abf6254b427d3e8"
+            ]
+        ]
+    },
+    {
+        "id": "7c049ead0b0802ec",
+        "type": "function",
+        "z": "b723cd2c2bf700f7",
+        "g": "0fe75074b046ce3e",
+        "name": "function 4",
+        "func": "msg.payload = { \"mushroom_id\": msg.payload };\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 340,
+        "wires": [
+            [
+                "63fc7c5e2d1ca25d"
+            ]
+        ]
+    },
+    {
+        "id": "16f11b25e0a34abf",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "644d6aabc7499ea8",
+        "type": "group",
+        "z": "b723cd2c2bf700f7",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "f68924bd662a03b6",
+            "0097942922a6e8e2",
+            "83e6828791dc3a56",
+            "ffaba79723ed645b",
+            "84e0b921fd2a82fe"
+        ],
+        "x": 124,
+        "y": 599,
+        "w": 1042,
+        "h": 82
+    },
+    {
+        "id": "f68924bd662a03b6",
+        "type": "mysql",
+        "z": "b723cd2c2bf700f7",
+        "g": "644d6aabc7499ea8",
+        "mydb": "4fa35495eb462076",
+        "name": "ค่าเฉลี่ย",
+        "x": 580,
+        "y": 640,
+        "wires": [
+            [
+                "0097942922a6e8e2"
+            ]
+        ]
+    },
+    {
+        "id": "0097942922a6e8e2",
+        "type": "function",
+        "z": "b723cd2c2bf700f7",
+        "g": "644d6aabc7499ea8",
+        "name": "SQL_Go",
+        "func": "if (!msg.payload || !Array.isArray(msg.payload) || msg.payload.length === 0) {\n    node.error(\"No data received or invalid data format.\");\n    return null;\n}\n\n// ตรวจสอบว่าได้ข้อมูลอุณหภูมิและความชื้นที่จำเป็น\nlet temperatureData = [];\nlet humidityData = [];\nlet labels = [];\n\n// แยกข้อมูลอุณหภูมิและความชื้น\nmsg.payload.forEach((row) => {\n    if (row.avg_temperature !== undefined) {\n        temperatureData.push(row.avg_temperature);  // เพิ่มข้อมูลอุณหภูมิ\n        labels.push(row.day);                        // เพิ่มวัน (timestamp) เป็น label\n    }\n    if (row.avg_humidity !== undefined) {\n        humidityData.push(row.avg_humidity);        // เพิ่มข้อมูลความชื้น\n    }\n});\n\n// ตรวจสอบข้อมูล\nif (temperatureData.length === 0) {\n    node.error(\"Temperature data is missing.\");\n    return null;\n}\n\nif (humidityData.length === 0) {\n    node.error(\"Humidity data is missing.\");\n    return null;\n}\n\n// ตรวจสอบให้แน่ใจว่า data ของ Temperature และ Humidity มีความยาวเท่ากัน\nif (temperatureData.length !== humidityData.length) {\n    node.error(\"Mismatched data between temperature and humidity.\");\n    return null;\n}\n\n// สร้างข้อมูลในรูปแบบที่สามารถใช้กับ ui_chart ได้\nmsg.payload = [\n    { series: [\"Temperature\", \"Humidity\"], data: [temperatureData, humidityData], labels: labels }\n];\n\n// ตรวจสอบรูปแบบของข้อมูลที่ส่งไปยัง chart\nnode.debug(msg.payload);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 640,
+        "wires": [
+            [
+                "84e0b921fd2a82fe"
+            ]
+        ]
+    },
+    {
+        "id": "83e6828791dc3a56",
+        "type": "inject",
+        "z": "b723cd2c2bf700f7",
+        "g": "644d6aabc7499ea8",
+        "name": "Start Query",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 240,
+        "y": 640,
+        "wires": [
+            [
+                "ffaba79723ed645b"
+            ]
+        ]
+    },
+    {
+        "id": "ffaba79723ed645b",
+        "type": "function",
+        "z": "b723cd2c2bf700f7",
+        "g": "644d6aabc7499ea8",
+        "name": "SQL Query",
+        "func": "msg.topic = \"SELECT DATE(timestamp) AS day, AVG(temperature) AS avg_temperature, AVG(humidity) AS avg_humidity FROM weekly_data WHERE timestamp >= DATE_SUB(NOW(), INTERVAL 7 DAY) GROUP BY day;\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 640,
+        "wires": [
+            [
+                "f68924bd662a03b6"
+            ]
+        ]
+    },
+    {
+        "id": "84e0b921fd2a82fe",
+        "type": "ui_chart",
+        "z": "b723cd2c2bf700f7",
+        "g": "644d6aabc7499ea8",
+        "name": "Temperature and Humidity",
+        "group": "0b1c8c321fbcfaf2",
+        "order": 4,
+        "width": 6,
+        "height": 6,
+        "label": "ค่าเฉลี่ยรายสัปดาห์",
+        "chartType": "line",
+        "legend": true,
+        "xformat": "Y-M-D",
+        "interpolate": "linear",
+        "nodata": "No data available",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "1",
+        "removeOlderPoints": "0",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#e00000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1020,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4fa35495eb462076",
+        "type": "MySQLdatabase",
+        "z": "b723cd2c2bf700f7",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "fram",
+        "tz": "",
+        "charset": "UTF8",
+        "info": " 1."
+    },
+    {
+        "id": "0b1c8c321fbcfaf2",
+        "type": "ui_group",
+        "name": "",
+        "tab": "cc5f88534cba80be",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "164a211388494dce",
+        "type": "group",
+        "z": "b723cd2c2bf700f7",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "782e5628c76bfa04",
+            "3627513ca9ed63c9",
+            "acc86cb4bfae8d53",
+            "6fbefe186ca60a72",
+            "54a5ccfbcd87de35",
+            "383efe36b6c45f2e",
+            "6061251d934242ae",
+            "a5d583a0bd29804f",
+            "359beaa88775f96a",
+            "909094c5f596ab80"
+        ],
+        "x": 274,
+        "y": 19,
+        "w": 772,
+        "h": 142
+    },
+    {
+        "id": "782e5628c76bfa04",
+        "type": "mqtt in",
+        "z": "b723cd2c2bf700f7",
+        "g": "164a211388494dce",
+        "name": "",
+        "topic": "test/status",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "88b8600ccefd4aa4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "3627513ca9ed63c9"
+            ]
+        ]
+    },
+    {
+        "id": "3627513ca9ed63c9",
+        "type": "ui_text",
+        "z": "b723cd2c2bf700f7",
+        "g": "164a211388494dce",
+        "group": "182b8f1c631e9a6a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "สถานะระบบ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 530,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "acc86cb4bfae8d53",
+        "type": "mqtt in",
+        "z": "b723cd2c2bf700f7",
+        "g": "164a211388494dce",
+        "name": "",
+        "topic": "test/statusSSR",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "88b8600ccefd4aa4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 380,
+        "y": 60,
+        "wires": [
+            [
+                "6fbefe186ca60a72"
+            ]
+        ]
+    },
+    {
+        "id": "6fbefe186ca60a72",
+        "type": "ui_text",
+        "z": "b723cd2c2bf700f7",
+        "g": "164a211388494dce",
+        "group": "182b8f1c631e9a6a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "วาล์วน้ำ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 540,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "54a5ccfbcd87de35",
+        "type": "mqtt out",
+        "z": "b723cd2c2bf700f7",
+        "g": "164a211388494dce",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "16f11b25e0a34abf",
+        "x": 970,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "383efe36b6c45f2e",
+        "type": "function",
+        "z": "b723cd2c2bf700f7",
+        "g": "164a211388494dce",
+        "name": "",
+        "func": "msg.payload = msg.payload + \"\\n\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 60,
+        "wires": [
+            [
+                "54a5ccfbcd87de35"
+            ]
+        ]
+    },
+    {
+        "id": "6061251d934242ae",
+        "type": "mqtt out",
+        "z": "b723cd2c2bf700f7",
+        "g": "164a211388494dce",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "16f11b25e0a34abf",
+        "x": 970,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "a5d583a0bd29804f",
+        "type": "function",
+        "z": "b723cd2c2bf700f7",
+        "g": "164a211388494dce",
+        "name": "",
+        "func": "msg.payload = msg.payload + \"\\n\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 120,
+        "wires": [
+            [
+                "6061251d934242ae"
+            ]
+        ]
+    },
+    {
+        "id": "359beaa88775f96a",
+        "type": "ui_button",
+        "z": "b723cd2c2bf700f7",
+        "g": "164a211388494dce",
+        "name": "",
+        "group": "182b8f1c631e9a6a",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "on",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "\t#008000",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "test/control",
+        "topicType": "str",
+        "x": 670,
+        "y": 60,
+        "wires": [
+            [
+                "383efe36b6c45f2e"
+            ]
+        ]
+    },
+    {
+        "id": "909094c5f596ab80",
+        "type": "ui_button",
+        "z": "b723cd2c2bf700f7",
+        "g": "164a211388494dce",
+        "name": "",
+        "group": "182b8f1c631e9a6a",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "off",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "\t#FF0000",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "str",
+        "topic": "test/control",
+        "topicType": "str",
+        "x": 670,
+        "y": 120,
+        "wires": [
+            [
+                "a5d583a0bd29804f"
+            ]
+        ]
+    },
+    {
+        "id": "43262c7b9a85e57a",
+        "type": "group",
+        "z": "b723cd2c2bf700f7",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "72938d5add566522",
+            "1683955e39a89cfa",
+            "6ccaa07fd04770e4",
+            "0e77c81e3feb2146",
+            "354ad8124ad72a18",
+            "167442d185dd69b9",
+            "36560f3eff2159ae",
+            "1d06677f387dc75f"
+        ],
+        "x": 114,
+        "y": 359,
+        "w": 472,
+        "h": 202
+    },
+    {
+        "id": "72938d5add566522",
+        "type": "mqtt out",
+        "z": "b723cd2c2bf700f7",
+        "g": "43262c7b9a85e57a",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "16f11b25e0a34abf",
+        "x": 510,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "1683955e39a89cfa",
+        "type": "function",
+        "z": "b723cd2c2bf700f7",
+        "g": "43262c7b9a85e57a",
+        "name": "",
+        "func": "msg.payload = msg.payload + \"\\n\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 400,
+        "wires": [
+            [
+                "72938d5add566522"
+            ]
+        ]
+    },
+    {
+        "id": "6ccaa07fd04770e4",
+        "type": "mqtt out",
+        "z": "b723cd2c2bf700f7",
+        "g": "43262c7b9a85e57a",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "16f11b25e0a34abf",
+        "x": 510,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "0e77c81e3feb2146",
+        "type": "function",
+        "z": "b723cd2c2bf700f7",
+        "g": "43262c7b9a85e57a",
+        "name": "",
+        "func": "msg.payload = msg.payload + \"\\n\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 460,
+        "wires": [
+            [
+                "6ccaa07fd04770e4"
+            ]
+        ]
+    },
+    {
+        "id": "354ad8124ad72a18",
+        "type": "ui_button",
+        "z": "b723cd2c2bf700f7",
+        "g": "43262c7b9a85e57a",
+        "name": "",
+        "group": "0b1c8c321fbcfaf2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "เปิดไฟ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "\t#008000",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "cam/light",
+        "topicType": "str",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "1683955e39a89cfa"
+            ]
+        ]
+    },
+    {
+        "id": "167442d185dd69b9",
+        "type": "ui_button",
+        "z": "b723cd2c2bf700f7",
+        "g": "43262c7b9a85e57a",
+        "name": "",
+        "group": "0b1c8c321fbcfaf2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ปิดไฟ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "\t#FF0000",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "str",
+        "topic": "cam/light",
+        "topicType": "str",
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "0e77c81e3feb2146"
+            ]
+        ]
+    },
+    {
+        "id": "36560f3eff2159ae",
+        "type": "ui_template",
+        "z": "b723cd2c2bf700f7",
+        "g": "43262c7b9a85e57a",
+        "group": "0b1c8c321fbcfaf2",
+        "name": "esp_cam",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"text-align:center;\">\n  <h3>ESP32-CAM Stream</h3>\n  <img src=\"http://{{msg.payload}}\" style=\"width:100%; max-width:340px; height:200px;\"/>\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 420,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1d06677f387dc75f",
+        "type": "mqtt in",
+        "z": "b723cd2c2bf700f7",
+        "g": "43262c7b9a85e57a",
+        "name": "",
+        "topic": "esp32/cam/ip",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "16f11b25e0a34abf",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 520,
+        "wires": [
+            [
+                "36560f3eff2159ae"
+            ]
+        ]
+    }
+]
